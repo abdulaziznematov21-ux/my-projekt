@@ -1,11 +1,14 @@
-import React from 'react';
+import ConvexClientProvider from "./ConvexClientProvider";
+import "./globals.css";
 
-
-export default function Loading() {
+export default function RootLayout({ children }) {
   return (
-    <div className="loading-container">
-      <div className="spinner"></div>
-      <p>Yuklanmoqda, iltimos kuting...</p>
-    </div>
+    <html lang="en">
+      <body>
+        <ConvexClientProvider>
+          {children}
+        </ConvexClientProvider>
+      </body>
+    </html>
   );
 }
